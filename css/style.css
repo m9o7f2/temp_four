@@ -1,17 +1,13 @@
 body{
-   background-color: #8a16c3;
+   background-color: hsl(257, 40%, 49%);
    position: relative;
 }
-
 .ime{
    position: absolute;
    height: 100%;
+   left: 50%;
+   transform: translate(-55%);
 }
-
-section{
-   color:#fff;
-}
-
 section h1{
    font-family: sans-serif;
    font-size: 45px;
@@ -24,12 +20,12 @@ section button{
    border: none;
    outline: none;
    font-weight: bold;
-   color: #8a16c3;
+   color: hsl(257, 40%, 49%);
    box-shadow: 6px 5px 15px -7px black;
    transition: all .5s;
 }
 section button:hover{
-   background: #8a16c3;
+   background: hsl(257, 40%, 49%);
    color: #fff;
 }
 
@@ -59,10 +55,24 @@ body ul li a:hover{
 .attribution a { color: #ffc107; }
 
 @media (max-width:990px){
+   .ime{
+      height: auto;
+      width: 100% !important;
+      transform: translate(-50%);
+   }
+   section h1{
+      font-size: 40px;
+      padding-top: 30px;
+   }
+   body .ime:first-of-type{
+      display: none !important;
+   }
+   body .ime:last-of-type{
+      display: block !important;
+   }
    .cont {
       text-align: center
    }
-
    .lis ul{
       position: static;
    }
